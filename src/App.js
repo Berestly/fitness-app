@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { INITIAL_DATA, WEEK_BLOCKS, DAY_TYPES, SCHEDULE } from './data';
+import { INITIAL_DATA, WEEK_BLOCKS, DAY_TYPES, SCHEDULE } from './data/data';
 import './App.css';
 
 // ─── STORAGE ─────────────────────────────────────────────────────────────────
