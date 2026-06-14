@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { INITIAL_DATA, WEEK_BLOCKS, DAY_TYPES, SCHEDULE } from './data/data';
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import { useAppData } from './hooks/useAppData';
 import WorkoutPanel from './components/WorkoutPanel';
@@ -9,7 +5,6 @@ import RoadmapPanel from './components/RoadmapPanel';
 import StatisticsPanel from './components/StatisticsPanel';
 import LoginPage from './components/LoginPage';
 import AdminPanel from './components/AdminPanel';
->>>>>>> 67e1a90 (added login logic)
 import './App.css';
 
 export default function App() {

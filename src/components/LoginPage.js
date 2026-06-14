@@ -92,7 +92,7 @@ export default function LoginPage({ onLoginSuccess, onAdminMode }) {
     <div className="login-page">
       <div className="login-container">
         <div className="login-header">
-          <h1>Login Page</h1>
+          <h1>App Login</h1>
           <p>Track your fitness journey</p>
         </div>
 
