@@ -1,101 +1,75 @@
-# 8-Week Cutting Program App
+# My 2-Month Plan — Workout + TypeScript Roadmap
 
-A full-featured fitness tracker with AI coaching via Claude.
+A 3-panel personal tracker: workout routine with progressive overload, a TypeScript→LWC open source learning roadmap, and an AI coach.
 
-## Features
-- Overview, Training, Nutrition, Hair Care tabs
-- Full Add / Edit / Delete for every item
-- AI Coach panel — chat with Claude to edit your program
-- All data saved to browser localStorage (no backend needed)
-- Auto-deploys to GitHub Pages on every `git push`
+## What's inside
+
+| Panel | What it does |
+|---|---|
+| 🏋️ Workout | PPL, Upper/Lower, Full Body, PHUL — switch via ⚙️ settings. Add/Edit/Delete exercises per phase. |
+| 🗺️ Roadmap | TS Basics → Intermediate → LWC Prep → LWC OSS. Click nodes to expand, click status to cycle Todo→In Progress→Done. |
+| 🤖 AI Coach | Connect your Anthropic API key to chat about workouts, TypeScript, and open source. |
+
+## Save as PDF
+Click **↓ Save as PDF** in the top bar → browser print dialog → "Save as PDF". AI panel is hidden in print.
 
 ---
 
-## Deploy in 5 Steps
+## Deploy (5 steps, ~5 minutes)
 
-### Step 1: Create a GitHub repository
+### Step 1 — Create GitHub repo
 1. Go to https://github.com/new
-2. Name it `fitness-app` (or anything you like)
-3. Set it to **Public** (required for free GitHub Pages)
-4. Click **Create repository**
+2. Name it `my-plan` (or anything)
+3. Set **Public** (required for free Pages)
+4. Create repository
 
-### Step 2: Push this code
-In your terminal, inside this folder:
-
+### Step 2 — Push the code
 ```bash
 git init
 git add .
-git commit -m "Initial fitness app"
+git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/fitness-app.git
+git remote add origin https://github.com/YOUR_USERNAME/my-plan.git
 git push -u origin main
 ```
 
-Replace `YOUR_USERNAME` with your actual GitHub username.
-
-### Step 3: Enable GitHub Pages
-1. Go to your repo on GitHub
-2. Click **Settings** → **Pages** (left sidebar)
-3. Under "Source", select **GitHub Actions**
-4. Click **Save**
-
-### Step 4: Set homepage in package.json
-Edit `package.json` and add this line:
+### Step 3 — Add homepage to package.json
+Open `package.json`, add this line inside the top `{`:
 ```json
-"homepage": "https://YOUR_USERNAME.github.io/fitness-app"
+"homepage": "https://YOUR_USERNAME.github.io/my-plan",
 ```
-
-Then push again:
+Then push:
 ```bash
-git add package.json
-git commit -m "Set homepage"
-git push
+git add package.json && git commit -m "Set homepage" && git push
 ```
 
-### Step 5: Wait 2 minutes
-GitHub Actions will automatically build and deploy your app.
-Your app will be live at: **https://YOUR_USERNAME.github.io/fitness-app**
+### Step 4 — Enable GitHub Pages
+1. GitHub repo → **Settings** → **Pages**
+2. Source: **GitHub Actions**
+3. Save
+
+### Step 5 — Wait ~2 minutes
+Live at: `https://YOUR_USERNAME.github.io/my-plan`
 
 ---
 
-## Auto-updates
+## Auto-update (no re-download needed)
 
-Every time you push code, GitHub Actions automatically rebuilds and redeploys.
-No need to download or reinstall anything.
-
+Every `git push` triggers GitHub Actions to rebuild and redeploy automatically:
 ```bash
-# Make a change, then:
 git add .
-git commit -m "Update workout targets"
+git commit -m "Update week 3 exercises"
 git push
-# App updates in ~2 minutes automatically
+# App updates in ~90 seconds
 ```
 
 ---
 
-## AI Coach Setup
-
-1. Open the app in your browser
-2. Click the AI Coach panel on the right
-3. Click **"Get your API key →"** — this takes you to Anthropic Console
-4. Create an account and copy your API key (starts with `sk-ant-`)
-5. Paste it in the app and click **Connect**
-
-Your API key is stored only in your browser's localStorage. It's never sent anywhere except directly to Anthropic's API.
-
----
-
-## Local Development
-
+## Local dev
 ```bash
 npm install
-npm start
+npm start   # opens http://localhost:3000
 ```
 
-Opens at http://localhost:3000
-
----
-
-## Reset Data
-
-Click **"Reset to defaults"** in the top-right corner to restore the original program data.
+## Reset data
+Click **Reset** in top-right → confirms → all edits and roadmap progress restored to defaults.
